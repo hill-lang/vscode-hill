@@ -1,0 +1,191 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Hill",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#keywords.builtin"
+		},
+		{
+			"include": "#identifiers"
+		},
+		{
+			"include": "#operators"
+		},
+		{
+			"include": "#punctuation"
+		}
+	],
+	"repository": {
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.double-slash.hill",
+					"begin": "//",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.comment.hill"
+						}
+					},
+					"end": "$\\n?",
+					"patterns": []
+				},
+				{
+					"name": "comment.block.hill",
+					"begin": "/\\*",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.comment.hill"
+						}
+					},
+					"end": "\\*/",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.comment.hill"
+						}
+					},
+					"patterns": []
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.hill",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.hill",
+					"match": "\\\\."
+				}
+			]
+		},
+		"numbers": {
+			"patterns": [
+				{
+					"name": "constant.numeric.integer.hill",
+					"match": "\\b([1-9][0-9]*|0)u?\\b"
+				},
+				{
+					"name": "constant.numeric.float.hill",
+					"match": "\\b([1-9][0-9]*|0)?\\.(\\d+)?([eE][-+]?[0-9]+)?\\b"
+				},
+				{
+					"name": "constant.numeric.hex.hill",
+					"match": "\\b0x[0-9a-fA-F][0-9a-fA-F']+u?\\b"
+				},
+				{
+					"name": "constant.numeric.binary.hill",
+					"match": "\\b0b[01]+[01']*u?\\b"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.hill",
+					"match": "@[a-zA-Z_][a-zA-Z0-9_]*"
+				}
+			]
+		},
+		"keywords.builtin": {
+			"patterns": [
+				{
+					"name": "keyword.control.hill",
+					"match": "\\b(i8|i16|i32|i64|i128|u8|u16|u32|u64|u128|f32|f64|f128|d64|d128)\\b"
+				},
+				{
+					"name": "keyword.control.hill",
+					"match": "\\b(mut)\\b"
+				}
+			]
+		},
+		"identifiers": {
+			"patterns": [
+				{
+					"name": "variable.other.hill",
+					"match": "[a-zA-Z_][a-zA-Z0-9_]*"
+				}
+			]
+		},
+		"operators": {
+			"patterns": [
+				{
+					"name": "keyword.operator.assignment.hill",
+					"match": "(=|:=|\\-=|\\*=|\\/=|\\&=|\\^=|\\|=|<<=|>>=)"
+				},
+				{
+					"name": "keyword.operator.boolean.hill",
+					"match": "(\\|\\||\\&\\&|\\!)"
+				},
+				{
+					"name": "keyword.operator.bitwise.hill",
+					"match": "(\\||\\&|\\^|\\~|<<|>>)"
+				},
+				{
+					"name": "keyword.operator.branching.hill",
+					"match": "(\\?|\\:)"
+				},
+				{
+					"name": "keyword.operator.arithmetic.hill",
+					"match": "(\\+|\\-|\\*|\\/|\\+\\+|\\-\\-)"
+				},
+				{
+					"name": "keyword.operator.comparison.hill",
+					"match": "(==|!=|<|>|<=|>=)"
+				},
+				{
+					"name": "keyword.operator.hill",
+					"match": "(%|\\|>|\\.\\.)"
+				}
+			]
+		},
+		"punctuation": {
+			"patterns": [
+				{
+					"name": "punctuation.terminator.statement.hill",
+					"match": ";"
+				},
+				{
+					"name": "punctuation.separator.comma.hill",
+					"match": ","
+				},
+				{
+					"name": "punctuation.section.block.begin.hill",
+					"match": "\\{"
+				},
+				{
+					"name": "punctuation.section.block.end.hill",
+					"match": "\\}"
+				},
+				{
+					"name": "punctuation.section.parens.begin.hill",
+					"match": "\\("
+				},
+				{
+					"name": "punctuation.section.parens.end.hill",
+					"match": "\\)"
+				},
+				{
+					"name": "punctuation.section.brackets.begin.hill",
+					"match": "\\["
+				},
+				{
+					"name": "punctuation.section.brackets.end.hill",
+					"match": "\\]"
+				}
+			]
+		}
+	},
+	"scopeName": "source.hill"
+}

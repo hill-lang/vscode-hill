@@ -1,0 +1,25 @@
+{
+  "name": "vscode-hill",
+  "displayName": "vscode-hill",
+  "description": "Hill language support",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.99.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "hill",
+      "aliases": ["Hill", "hill"],
+      "extensions": [".hill"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "hill",
+      "scopeName": "source.hill",
+      "path": "./syntaxes/hill.tmLanguage.json"
+    }]
+  }
+}
