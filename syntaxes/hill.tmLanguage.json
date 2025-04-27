@@ -2,30 +2,14 @@
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "Hill",
 	"patterns": [
-		{
-			"include": "#comments"
-		},
-		{
-			"include": "#strings"
-		},
-		{
-			"include": "#numbers"
-		},
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#keywords.builtin"
-		},
-		{
-			"include": "#identifiers"
-		},
-		{
-			"include": "#operators"
-		},
-		{
-			"include": "#punctuation"
-		}
+		{"include": "#comments"},
+		{"include": "#strings"},
+		{"include": "#numbers"},
+		{"include": "#keywords"},
+		{"include": "#keywords.builtin"},
+		{"include": "#identifiers"},
+		{"include": "#operators"},
+		{"include": "#punctuation"}
 	],
 	"repository": {
 		"comments": {
@@ -34,9 +18,7 @@
 					"name": "comment.line.double-slash.hill",
 					"begin": "//",
 					"beginCaptures": {
-						"0": {
-							"name": "punctuation.definition.comment.hill"
-						}
+						"0": {"name": "punctuation.definition.comment.hill"}
 					},
 					"end": "$\\n?",
 					"patterns": []
@@ -45,15 +27,11 @@
 					"name": "comment.block.hill",
 					"begin": "/\\*",
 					"beginCaptures": {
-						"0": {
-							"name": "punctuation.definition.comment.hill"
-						}
+						"0": {"name": "punctuation.definition.comment.hill"}
 					},
 					"end": "\\*/",
 					"endCaptures": {
-						"0": {
-							"name": "punctuation.definition.comment.hill"
-						}
+						"0": {"name": "punctuation.definition.comment.hill"}
 					},
 					"patterns": []
 				}
