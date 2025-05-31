@@ -10,9 +10,7 @@
   "engines": {
     "vscode": "^1.99.0"
   },
-  "categories": [
-    "Programming Languages"
-  ],
+  "categories": ["Programming Languages"],
   "repository": {
     "type": "git",
     "url": "https://github.com/hill-lang/vscode-hill.git"
@@ -21,23 +19,14 @@
     "languages": [
       {
         "id": "hill",
-        "aliases": [
-          "Hill",
-          "hill"
-        ],
-        "extensions": [
-          ".hill"
-        ],
+        "aliases": ["Hill", "hill"],
+        "extensions": [".hill"],
         "configuration": "./language-configuration.json"
       },
       {
         "id": "hill_c_text",
-        "aliases": [
-          "Hill Compiled"
-        ],
-        "extensions": [
-          ".hill_c.txt"
-        ]
+        "aliases": ["Hill Compiled"],
+        "extensions": [".hill_c.txt"]
       }
     ],
     "grammars": [
