@@ -15,16 +15,39 @@
     "url": "https://github.com/hill-lang/vscode-hill.git"
   },
   "contributes": {
-    "languages": [{
-      "id": "hill",
-      "aliases": ["Hill", "hill"],
-      "extensions": [".hill"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "hill",
-      "scopeName": "source.hill",
-      "path": "./syntaxes/hill.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "hill",
+        "aliases": [
+          "Hill",
+          "hill"
+        ],
+        "extensions": [
+          ".hill"
+        ],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "hill_c_text",
+        "aliases": [
+          "Hill Compiled"
+        ],
+        "extensions": [
+          ".hill_c.txt"
+        ]
+      }
+    ],
+    "grammars": [
+      {
+        "language": "hill",
+        "scopeName": "source.hill",
+        "path": "./syntaxes/hill.tmLanguage.json"
+      },
+      {
+        "language": "hill_c_text",
+        "scopeName": "source.hill.txt",
+        "path": "./syntaxes/hill_c.txt.tmLanguage.json"
+      }
+    ]
   }
 }
