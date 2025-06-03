@@ -4,29 +4,46 @@
   "description": "Hill language support",
   "version": "0.0.2",
   "publisher": "hill-lang",
+  "license": "MIT",
+  "categories": [
+    "Programming Languages"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hill-lang/vscode-hill.git"
+  },
   "scripts": {
+    "build": "tsc -b",
     "publish": "vsce publish"
   },
   "engines": {
     "vscode": "^1.99.0"
   },
-  "categories": ["Programming Languages"],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/hill-lang/vscode-hill.git"
-  },
+  "activationEvents": [
+    "onLanguage"
+  ],
+  "main": "./out/client/extension",
   "contributes": {
     "languages": [
       {
         "id": "hill",
-        "aliases": ["Hill", "hill"],
-        "extensions": [".hill"],
+        "aliases": [
+          "Hill",
+          "hill"
+        ],
+        "extensions": [
+          ".hill"
+        ],
         "configuration": "./language-configuration.json"
       },
       {
         "id": "hill_c_text",
-        "aliases": ["Hill Compiled"],
-        "extensions": [".hill_c.txt"]
+        "aliases": [
+          "Hill Compiled"
+        ],
+        "extensions": [
+          ".hill_c.txt"
+        ]
       }
     ],
     "grammars": [
@@ -41,5 +58,13 @@
         "path": "./syntaxes/hill_c.txt.tmLanguage.json"
       }
     ]
+  },
+  "dependencies": {
+    "vscode-languageclient": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.29",
+    "@types/vscode": "^1.100.0",
+    "typescript": "^5.8.3"
   }
 }
