@@ -10,13 +10,14 @@ import {
 let client: LanguageClient;
 
 export function activate(context: ExtensionContext) {
-  const serverPath = 'D:\\dev\\hill\\hill\\bin\\debug\\hill.exe';
+  // const serverPath = 'D:\\dev\\hill\\hill\\bin\\debug\\hill.exe';
+  let serverPath = '';
 
   // let serverPath = '';
   if (process.platform === 'win32') {
-    // serverPath = context.asAbsolutePath(
-    //   path.join('server', 'hill-win-x64.exe')
-    // );
+    serverPath = context.asAbsolutePath(
+      path.join('server', 'hill-win-x86-64.exe')
+    );
   } else if (process.platform === 'darwin') {
     throw Error("We don't support MacOS");
     // serverPath = context.asAbsolutePath(path.join('server', 'hill-macos-x64'));
