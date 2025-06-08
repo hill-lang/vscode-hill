@@ -2,7 +2,7 @@
   "name": "vscode-hill",
   "displayName": "vscode-hill",
   "description": "Hill language support",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "hill-lang",
   "license": "MIT",
   "categories": [
@@ -14,7 +14,7 @@
   },
   "scripts": {
     "build": "tsc -b",
-    "publish": "vsce publish"
+    "publish": "vsce publish --no-dependencies"
   },
   "engines": {
     "vscode": "^1.99.0"
@@ -63,8 +63,8 @@
     "vscode-languageclient": "^9.0.1"
   },
   "devDependencies": {
-    "@types/node": "^22.15.29",
-    "@types/vscode": "^1.100.0",
+    "@types/node": "^22.15.30",
+    "@types/vscode": "^1.99.0",
     "typescript": "^5.8.3"
   }
 }
