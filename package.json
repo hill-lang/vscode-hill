@@ -14,7 +14,7 @@
   },
   "scripts": {
     "build": "tsc -b",
-    "publish": "vsce publish --no-dependencies"
+    "publish": "vsce publish"
   },
   "engines": {
     "vscode": "^1.99.0"
@@ -22,7 +22,7 @@
   "activationEvents": [
     "onLanguage"
   ],
-  "main": "./out/client/extension",
+  "main": "./client/out/extension",
   "contributes": {
     "languages": [
       {
@@ -59,12 +59,12 @@
       }
     ]
   },
-  "dependencies": {
-    "vscode-languageclient": "^9.0.1"
-  },
   "devDependencies": {
     "@types/node": "^22.15.30",
     "@types/vscode": "^1.99.0",
     "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "vscode-languageclient": "^9.0.1"
   }
 }

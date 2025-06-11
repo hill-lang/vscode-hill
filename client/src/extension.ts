@@ -16,15 +16,15 @@ export function activate(context: ExtensionContext) {
   // let serverPath = '';
   if (process.platform === 'win32') {
     serverPath = context.asAbsolutePath(
-      path.join('server', 'hill-win-x86-64.exe')
+      path.join('bin', 'hill-win-x86-64.exe')
     );
   } else if (process.platform === 'darwin') {
     throw Error("We don't support MacOS");
-    // serverPath = context.asAbsolutePath(path.join('server', 'hill-macos-x64'));
+    // serverPath = context.asAbsolutePath(path.join('bin', 'hill-macos-x64'));
   } else {
     // Assume Linux
     throw Error("We don't support Linux");
-    // serverPath = context.asAbsolutePath(path.join('server', 'hill-linux-x64'));
+    // serverPath = context.asAbsolutePath(path.join('bin', 'hill-linux-x64'));
   }
 
   // Start the server process
