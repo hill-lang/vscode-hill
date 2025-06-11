@@ -2,7 +2,7 @@
   "name": "vscode-hill",
   "displayName": "vscode-hill",
   "description": "Hill language support",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "publisher": "hill-lang",
   "license": "MIT",
   "categories": [
@@ -14,7 +14,7 @@
   },
   "scripts": {
     "build": "tsc -b",
-    "publish": "vsce publish"
+    "publish": "npm run build && vsce publish"
   },
   "engines": {
     "vscode": "^1.99.0"
