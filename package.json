@@ -2,7 +2,7 @@
   "name": "vscode-hill",
   "displayName": "Hill",
   "description": "Hill language support",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "publisher": "hill-lang",
   "license": "MIT",
   "icon": "assets/hill-icon.png",
