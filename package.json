@@ -1,10 +1,11 @@
 {
   "name": "vscode-hill",
-  "displayName": "vscode-hill",
+  "displayName": "Hill",
   "description": "Hill language support",
   "version": "0.0.6",
   "publisher": "hill-lang",
   "license": "MIT",
+  "icon": "assets/hill-icon.png",
   "categories": [
     "Programming Languages"
   ],
